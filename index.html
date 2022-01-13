@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script defer src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/aos.css">
     <script src="./js/aos.js"></script>
     <script type="text/javascript">
@@ -21,6 +20,10 @@
 </head>
 
 <body>
+    <div id="loader--wrapper">
+        <div id="loader"></div>
+        <span class="loader--span">Loading...</span>
+    </div>
     <div class="particles-body">
         <section id="landing-page">
             <nav>
@@ -292,8 +295,11 @@
     </div>
     <div id="particles-js"></div>
     <script src="./js/particles.js"></script>
+    <script src="./js/index.js"></script>
     <script>
         AOS.init();
+        initLoader();
+        CheckStatus();
     </script>
 </body>
 

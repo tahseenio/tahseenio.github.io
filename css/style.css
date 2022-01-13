@@ -104,7 +104,6 @@ textarea:focus {
 p {
     line-height: 1.5;
     font-size: 16px;
-    cursor:none;
 }
 
 a {
@@ -205,6 +204,72 @@ nav,
 .dark-theme .contact-button--popper{
     color: white;
     text-shadow: -1px -1px 0 #242424, 1px -1px 0 #242424, -1px 1px 0 #242424, 1px 1px 0 #242424;
+}
+
+.dark-theme #loader--wrapper {
+    background-color: #242424;
+}
+/*
+
+Loader
+
+*/
+
+#loader {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #33b9de;
+    animation: spin 1.5s linear infinite;
+    z-index: 1001;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#loader--wrapper {
+    background-color: white;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loader--span {
+    color: #33b9de;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: loading-text 3s ease-in-out infinite;
+}
+
+@keyframes loading-text {
+    50% {
+        color: transparent;
+    }
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }
 
 /* 

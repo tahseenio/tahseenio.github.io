@@ -1,5 +1,22 @@
+let randNumber;
 let isModalOpen = false;
 let contrastToggle;
+
+
+// Loader function
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+  
+randNumber = randomIntFromInterval(2000, 8000)
+
+function initLoader() {
+        document.body.classList.add("stop-scrolling");
+    setTimeout(() => {
+        document.body.classList.remove("stop-scrolling");
+        document.getElementById("loader--wrapper").style.display = "none";
+    }, randNumber);
+ }
 
 // Dark mode toggle with localstorage implementation
 if (localStorage.getItem('darkMode')===null) {
@@ -16,8 +33,6 @@ function CheckStatus() {
         particlesJS.load('particles-js', 'particles-light.json')
     }
 }
-
-CheckStatus();
 
 function toggleContrast() {
     contrastToggle = !contrastToggle;
