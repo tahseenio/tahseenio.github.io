@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 /* NOTES 
--change to my own logo icon
 -change link location for my resume
 -ensure nav buttons (about, project contact) all work
--learn what the different animation parameters are 
 - ensure links are working and I use my own project img for my first project
--change color of title-color to my prefered color
--change color of submit button in contacts
--change color of input:hover, textarea:hover{} and input:focus, textarea:focus {}
 - add aos-delay
-- fix nav shadow so that particles dont look 'cut off'
-- configure particle effect (esp disable the mouse effect)
 
 */
 
@@ -62,7 +55,6 @@ li {
 }
 
 section {
-    /* background-color: rgb(245, 245, 245); */
     transition: all 300ms ease;
 }
 
