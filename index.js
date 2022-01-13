@@ -13,6 +13,7 @@ function CheckStatus() {
     }
     else {
         contrastToggle = false;
+        particlesJS.load('particles-js', 'particles-light.json')
     }
 }
 
@@ -27,12 +28,14 @@ function enableDarkTheme() {
     document.body.classList += " dark-theme"
     document.getElementById("personal-logo").src = "./assets/logo_inverted.svg";
     localStorage.setItem('darkMode', "Dark");
+    particlesJS.load('particles-js', 'particles-dark.json')
 }
 
 function disableDarkTheme() {
     document.body.classList.remove("dark-theme")
     document.getElementById("personal-logo").src = "./assets/logo.svg";
     localStorage.setItem('darkMode', "Light")
+    particlesJS.load('particles-js', 'particles-light.json')
 }
 
 
@@ -67,3 +70,7 @@ function toggleModal() {
     isModalOpen = true;     
     document.body.classList += " modal--open"
 }
+
+
+let color;
+color.style.color

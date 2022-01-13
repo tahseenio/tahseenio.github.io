@@ -9,9 +9,11 @@
 -change color of title-color to my prefered color
 -change color of submit button in contacts
 -change color of input:hover, textarea:hover{} and input:focus, textarea:focus {}
+- add aos-delay
+- fix nav shadow so that particles dont look 'cut off'
+- configure particle effect (esp disable the mouse effect)
 
 */
-
 
 * {
     margin: 0;
@@ -19,6 +21,25 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+.particles-body {
+   z-index: 100;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(245, 245, 245);
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -41,7 +62,7 @@ li {
 }
 
 section {
-    background-color: rgb(245, 245, 245);
+    /* background-color: rgb(245, 245, 245); */
     transition: all 300ms ease;
 }
 
@@ -83,6 +104,7 @@ textarea:focus {
 p {
     line-height: 1.5;
     font-size: 16px;
+    cursor:none;
 }
 
 a {
@@ -163,7 +185,7 @@ nav,
     color: white;
 }
 
-.dark-theme section {
+.dark-theme #particles-js {
     background-color: #242424;
 }
 
@@ -241,10 +263,15 @@ nav {
     padding: 0 20px;
 }
 
+.personal-logo--wrapper {
+    padding-top: 16px;
+}
+
 #personal-logo {
     width: 75px;
     height: 75px;
 }
+
 
 .nav__link--list {
     display: flex;
@@ -602,10 +629,16 @@ Footer
 
 */
 
-
 footer {
     background-color: #242424;
     display: flex;
+}
+
+.footer__container {
+    border-top: 1px solid gray;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .footer__row {

@@ -10,280 +10,298 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="aos.css">
     <script defer src="index.js"></script>
+    <script src="aos.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_YUqGOfbhTjX61mJSdOviw");
         })();
     </script>
 </head>
+
 <body>
-    <section id="landing-page">
-        <nav>
-            <figure>
-                <img id="personal-logo" src="./assets/logo.svg" alt="">
-            </figure>
-            <ul class="nav__link--list">
-                <li class="nav__link">
-                    <a href="#" onclick="toggleModal()" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black
-                    ">About</a>
-                </li>
-                <li class="nav__link">
-                    <a href="#projects" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black
-                    ">Project</a>
-                </li>
-                <li class="nav__link">
-                    <a href="#" onclick="toggleModal()" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black
-                    ">Contact</a>
-                </li>
-                <li class="nav__link">
-                    <a href="#" class="
-                    nav__link--anchor
-                    "><i class="fas fa-adjust click" onclick="toggleContrast()"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <header class="header">
-            <div class="header__content">
-                <h1 class="title">Hey<br>
-                    <span class="title-color">I'm Tahseen</span>
-                </h1>
-                <p class="header__para">
-                    I'm a <b class="title-color">Frontend Software Engineer</b> with a strong passion for building web
-                    applications with great user experiences. <br>
-                    Here's a bit more <b class="title-color click click-text" onclick="toggleModal()">about me.</b>
-                </p>
-                <div class="social__list">
-                    <a href="https://www.linkedin.com/in/tahseen-islam-7a76b5182/" target="_blank"
-                        class="social__link click">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/tahseenio" target="_blank" class="social__link click">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="./assets/Resume.pdf" target="_blank" class="social__link click">
-                        <i class="fas fa-file"></i>
-                    </a>
-                </div>
-            </div>
-        </header>
-        <a class="contact-button--wrapper"href="#">
-        <button class="mail__btn click" onclick="toggleModal()">
-            <i class="fas fa-paper-plane"></i>
-        </button>
-        <span class="contact-button--popper">Contact</span>
-        </a>
-        <div class="modal">
-            <div class="modal__half modal__about">
-                <h3 class="modal__title modal__sub-title--about">Here's a bit about me</h3>
-                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
-                <p class="modal__para">
-                    I'm a 20 year-old Australian <b class="title-color">frontend software engineer</b> with a strong
-                    passion for developing
-                    websites with great <b class="title-color">user experiences.</b>
-                    <br>
-                    I currently work on extremely difficult engineering problems and learn from a team consisting of
-                    some of the most <b class="title-color">talented</b> and <b class="title-color">experienced</b>
-                    software engineers every day.
-                </p>
-                <div class="modal__languages">
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                    <figure class="modal__language">
-                        <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
-                        <span class="language__name">HTML</span>
-                    </figure>
-                </div>
-            </div>
-            <div class="modal__half modal__contact">
-                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
-                <h3 class="modal__title modal__title--contact">
-                    Let's have a chat!
-                </h3>
-                <h4 class="modal__sub-title modal__sub-title--contact">
-                    I am looking forward to hearing from you.
-                </h4>
-                <form onsubmit="contact(event)" id="contact__form">
-                    <div class="form__item">
-                        <label class="form__item--label">Name</label>
-                        <input type="text" name="user_name" class="input" required></input>
-                    </div>
-                    <div class="form__item">
-                        <label class="form__item--label">Email</label>
-                        <input type="email" name="user_email" class="input" required></input>
-                    </div>
-                    <div class="form__item">
-                        <label class="form__item--label">Message</label>
-                        <textarea type="text" name="message" class="input" required></textarea>
-                    </div>
-                    <button id="contact__submit" class="form__submit">Submit</button>
-                </form>
-                <div class="modal__overlay modal__overlay--loading">
-                    <i class="fas fa-spinner"></i>
-                </div>
-                <div class="modal__overlay modal__overlay--success">
-                    Thanks for the message! I will get back to you as soon as possible.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <div class="row">
-                <h1 class="section__title">
-                    Here are some of my <span class="title-color">projects</span>
-                </h1>
-                <ul class="project__list">
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
-                            <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Treact Website Replicate
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    Html, CSS, Javascript
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
-                                    suscipit
-                                    dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
-                                </p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/tahseenio" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://github.com/tahseenio" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fas fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <!-- <div id="particles-js" style="position: absolute; left: 0; top: 100px; height: calc(280vh - 100px);"></div> -->
+
+    <div class="particles-body">
+        <section id="landing-page">
+            <nav>
+                <figure class="personal-logo--wrapper">
+                    <img id="personal-logo" src="./assets/logo.svg" alt="">
+                </figure>
+                <ul class="nav__link--list">
+                    <li class="nav__link">
+                        <a href="#" onclick="toggleModal()" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+                ">About</a>
                     </li>
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
-                            <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Treact Website Replicate
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    Html, CSS, Javascript
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
-                                    suscipit
-                                    dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
-                                </p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/tahseenio" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://github.com/tahseenio" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fas fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <li class="nav__link">
+                        <a href="#projects" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+                ">Project</a>
                     </li>
-                    <li class="project">
-                        <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
-                            <div class="project__wrapper--bg"></div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Treact Website Replicate
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    Html, CSS, Javascript
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
-                                    suscipit
-                                    dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
-                                </p>
-                                <div class="project__description--links">
-                                    <a href="https://github.com/tahseenio" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://github.com/tahseenio" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fas fa-link"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                    <li class="nav__link">
+                        <a href="#" onclick="toggleModal()" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--black
+                ">Contact</a>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#" class="
+                nav__link--anchor
+                "><i class="fas fa-adjust click" onclick="toggleContrast()"></i></a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="container">
-            <div class="row footer__row">
-                <div class="footer__anchor click">
-                    <figure>
-                        <a href="#">
-                            <img class="footer__logo--img" src="./assets/logo_inverted.svg" alt="">
+            </nav>
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="title">Hey<br>
+                        <span class="title-color">I'm Tahseen</span>
+                    </h1>
+                    <p class="header__para">
+                        I'm a <b class="title-color">Frontend Software Engineer</b> with a strong passion for building
+                        web
+                        applications with great user experiences. <br>
+                        Here's a bit more <b class="title-color click click-text" onclick="toggleModal()">about me.</b>
+                    </p>
+                    <div class="social__list">
+                        <a href="https://www.linkedin.com/in/tahseen-islam-7a76b5182/" target="_blank"
+                            class="social__link click">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                    </figure>
-                    <span class="footer__logo--popper">
-                        Top
-                        <i class="fas fa-arrow-up"></i>
-                    </span>
+                        <a href="https://github.com/tahseenio" target="_blank" class="social__link click">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="./assets/Resume.pdf" target="_blank" class="social__link click">
+                            <i class="fas fa-file"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer__social--list">
-                    <a href="https://github.com/tahseenio" target="_blank" class="
+            </header>
+            <a class="contact-button--wrapper" href="#">
+                <button class="mail__btn click" onclick="toggleModal()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <span class="contact-button--popper">Contact</span>
+            </a>
+            <div class="modal">
+                <div class="modal__half modal__about">
+                    <h3 class="modal__title modal__sub-title--about">Here's a bit about me</h3>
+                    <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                    <p class="modal__para">
+                        I'm a 20 year-old Australian <b class="title-color">frontend software engineer</b> with a strong
+                        passion for developing
+                        websites with great <b class="title-color">user experiences.</b>
+                        <br>
+                        I currently work on extremely difficult engineering problems and learn from a team consisting of
+                        some of the most <b class="title-color">talented</b> and <b class="title-color">experienced</b>
+                        software engineers every day.
+                    </p>
+                    <div class="modal__languages">
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
+                            <span class="language__name">HTML</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
+                            <span class="language__name">HTML</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
+                            <span class="language__name">HTML</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
+                            <span class="language__name">HTML</span>
+                        </figure>
+                    </div>
+                </div>
+                <div class="modal__half modal__contact">
+                    <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                    <h3 class="modal__title modal__title--contact">
+                        Let's have a chat!
+                    </h3>
+                    <h4 class="modal__sub-title modal__sub-title--contact">
+                        I am looking forward to hearing from you.
+                    </h4>
+                    <form onsubmit="contact(event)" id="contact__form">
+                        <div class="form__item">
+                            <label class="form__item--label">Name</label>
+                            <input type="text" name="user_name" class="input" required></input>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label">Email</label>
+                            <input type="email" name="user_email" class="input" required></input>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label">Message</label>
+                            <textarea type="text" name="message" class="input" required></textarea>
+                        </div>
+                        <button id="contact__submit" class="form__submit">Submit</button>
+                    </form>
+                    <div class="modal__overlay modal__overlay--loading">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="modal__overlay modal__overlay--success">
+                        Thanks for the message! I will get back to you as soon as possible.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container" data-aos="fade-right">
+                <div class="row">
+                    <h1 class="section__title">
+                        Here are some of my <span class="title-color">projects</span>
+                    </h1>
+                    <ul class="project__list">
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Treact Website Replicate
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        Html, CSS, Javascript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
+                                        suscipit
+                                        dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/tahseenio" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://github.com/tahseenio" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Treact Website Replicate
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        Html, CSS, Javascript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
+                                        suscipit
+                                        dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/tahseenio" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://github.com/tahseenio" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Treact Website Replicate
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        Html, CSS, Javascript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
+                                        suscipit
+                                        dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/tahseenio" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://github.com/tahseenio" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container footer__container">
+                <div class="row footer__row">
+                    <div class="footer__anchor click">
+                        <figure>
+                            <a href="#">
+                                <img class="footer__logo--img" src="./assets/logo_inverted.svg" alt="">
+                            </a>
+                        </figure>
+                        <span class="footer__logo--popper">
+                            Top
+                            <i class="fas fa-arrow-up"></i>
+                        </span>
+                    </div>
+                    <div class="footer__social--list">
+                        <a href="https://github.com/tahseenio" target="_blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">Github</a>
-                    <a href="https://www.linkedin.com/in/tahseen-islam-7a76b5182/" target="_blank" class="
+                        <a href="https://www.linkedin.com/in/tahseen-islam-7a76b5182/" target="_blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">LinkedIn</a>
-                    <a href="#" onclick="toggleModal()" class="
+                        <a href="#" onclick="toggleModal()" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">Contact</a>
-                    <a href="./assets/Resume.pdf" target="_blank" class="
+                        <a href="./assets/Resume.pdf" target="_blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">Resume</a>
+                    </div>
+                    <div class="footer__copyright">Copyright &copy; 2022 Tahseen Islam</div>
                 </div>
-                <div class="footer__copyright">Copyright &copy; 2022 Tahseen Islam</div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <div id="particles-js"></div>
+    
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        AOS.init();
+        particleLoad();
+        // particlesJS.load('particles-js', 'particles.json');
+    </script>
 </body>
 
 </html>
