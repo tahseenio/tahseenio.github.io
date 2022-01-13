@@ -403,6 +403,10 @@ Modal
     transform: translateX(110%);
 }
 
+.modal__sub-title--contact {
+    color: #4bb543;
+}
+
 .modal__languages {
     display: flex;
     flex-wrap: wrap;
