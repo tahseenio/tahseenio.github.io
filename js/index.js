@@ -8,7 +8,7 @@ function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
   
-randNumber = randomIntFromInterval(2000, 8000)
+randNumber = randomIntFromInterval(300, 3500)
 
 function initLoader() {
         document.body.classList.add("stop-scrolling");
