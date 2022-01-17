@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tahseen</title>
     <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <link rel="stylesheet" href="./css/aos.css">
-    <script src="./js/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_YUqGOfbhTjX61mJSdOviw");
@@ -60,7 +59,7 @@
             </nav>
             <header class="header">
                 <div class="header__content">
-                    <h1 class="title">Hey<br>
+                    <h1 class="title header__title">Hey<br>
                         <span class="title-color">I'm Tahseen</span>
                     </h1>
                     <p class="header__para">
@@ -154,13 +153,13 @@
             </div>
         </section>
         <section id="projects">
-            <div class="container" data-aos="fade-right">
+            <div class="container">
                 <div class="row">
                     <h1 class="section__title">
                         Here are some of my <span class="title-color">projects</span>
                     </h1>
                     <ul class="project__list">
-                        <li class="project">
+                        <li class="project" data-aos="fade-up" data-os-duration="3000"> 
                             <div class="project__wrapper">
                                 <img src="./assets/blinker mockup.png" class="project__img" alt="">
                                 <div class="project__wrapper--bg"></div>
@@ -189,7 +188,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-aos="fade-up" data-os-duration="3000">
                             <div class="project__wrapper">
                                 <img src="./assets/blinker mockup.png" class="project__img" alt="">
                                 <div class="project__wrapper--bg"></div>
@@ -218,7 +217,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="project">
+                        <li class="project" data-aos="fade-up" data-os-duration="3000">
                             <div class="project__wrapper">
                                 <img src="./assets/blinker mockup.png" class="project__img" alt="">
                                 <div class="project__wrapper--bg"></div>
@@ -253,7 +252,7 @@
         </section>
         <footer>
             <div class="container footer__container">
-                <div class="row footer__row">
+                <div class="row footer__row" data-aos="zoom-in" data-os-duration="2000">
                     <div class="footer__anchor click">
                         <figure>
                             <a href="#">
@@ -295,8 +294,11 @@
     <div id="particles-js"></div>
     <script src="./js/particles.js"></script>
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true
+        })
         initLoader();
         CheckStatus();
     </script>

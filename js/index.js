@@ -1,9 +1,9 @@
 let randNumber;
 let isModalOpen = false;
 let contrastToggle;
+history.scrollRestoration = 'manual';
 
-
-// Loader function
+// Fake load time for loader function
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
@@ -85,3 +85,4 @@ function toggleModal() {
     isModalOpen = true;     
     document.body.classList += " modal--open"
 }
+
