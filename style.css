@@ -782,6 +782,11 @@ footer {
     .title {
         font-size: 52px;
     }
+
+    #personal-logo, .footer__logo--img {
+        width: 60px;
+        height: 60px;
+    }
     
     .header__para {
         font-size: 18px;
