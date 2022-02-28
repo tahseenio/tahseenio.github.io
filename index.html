@@ -103,24 +103,6 @@
                         some of the most <b class="title-color">talented</b> and <b class="title-color">experienced</b>
                         software engineers every day.
                     </p>
-                    <div class="modal__languages">
-                        <figure class="modal__language">
-                            <img class="modal__language--img" src="./assets/languages/html.jpg" alt="">
-                            <span class="language__name">HTML</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <img class="modal__language--img" src="./assets/languages/css.jpg" alt="">
-                            <span class="language__name">CSS</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <img class="modal__language--img" src="./assets/languages/js.jpg" alt="">
-                            <span class="language__name">JavaScript</span>
-                        </figure>
-                        <figure class="modal__language">
-                            <img class="modal__language--img" src="./assets/languages/react.jpg" alt="">
-                            <span class="language__name">React</span>
-                        </figure>
-                    </div>
                 </div>
                 <div class="modal__half modal__contact">
                     <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
@@ -154,6 +136,54 @@
                 </div>
             </div>
         </section>
+        <section id="about-me">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section__title">
+                        My <span class="title-color">Skill</span> Stack
+                    </h1>
+                    <div class="language__list tech-stack__container">
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/languages/html.jpg" class="language__img" alt="">
+                            </figure>
+                            <span class="language__name text-color--html">HTML</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/languages/css.jpg" class="language__img" alt="">
+                            </figure>
+                            <span class="language__name text-color--css">CSS</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/languages/js.jpg" class="language__img" alt="">
+                            </figure>
+                            <span class="language__name text-color--js">JavasScript</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/languages/react.jpg" class="language__img" alt="">
+                            </figure>
+                            <span class="language__name text-color--react">React.js</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/languages/reactNative.png" class="language__img" alt="">
+                            </figure>
+                            <span class="language__name text-color--react">React Native</span>
+                        </div>
+                        <div class="language">
+                            <figure class="language__img--wrapper">
+                                <img src="./assets/languages/typescript.jpg" class="language__img" alt="">
+                            </figure>
+                            <span class="language__name text-color--ts">TypeScript</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <section id="projects">
             <div class="container">
                 <div class="row">
@@ -161,16 +191,43 @@
                         Here are some of my <span class="title-color">projects</span>
                     </h1>
                     <ul class="project__list">
-                        <li class="project" data-aos="fade-up" data-os-duration="3000">
+                        <li class="project" data-aos="fade-up" data-os-duration="2000">
                             <div class="project__wrapper">
-                                <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                                <img src="./assets/Masjid_mockup.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Madina Masjid Website
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS & Javascript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Worked with a small team to produce a full website for the newly built Madina Masjid in Wakefield
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Faizzy7867/Madina-Masjid-website" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://madinamasjidwakefield.netlify.app/" target="_blank"
+                                            class="project__description--link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project" data-aos="fade-up" data-os-duration="2000">
+                            <div class="project__wrapper">
+                                <img src="./assets/treact-mockup.png" class="project__img" alt="">
                                 <div class="project__wrapper--bg"></div>
                                 <div class="project__description">
                                     <h3 class="project__description--title">
                                         Treact Website Replicate
                                     </h3>
                                     <h4 class="project__description--sub-title">
-                                        Html, CSS, Javascript
+                                        HTML & CSS
                                     </h4>
                                     <p class="project__description--para">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
@@ -190,45 +247,16 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="project" data-aos="fade-up" data-os-duration="3000">
+                        <li class="project" data-aos="fade-up" data-os-duration="2000">
                             <div class="project__wrapper">
-                                <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                                <img src="./assets/treact-mockup.png" class="project__img" alt="">
                                 <div class="project__wrapper--bg"></div>
                                 <div class="project__description">
                                     <h3 class="project__description--title">
-                                        Treact Website Replicate
+                                        Book store
                                     </h3>
                                     <h4 class="project__description--sub-title">
-                                        Html, CSS, Javascript
-                                    </h4>
-                                    <p class="project__description--para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
-                                        suscipit
-                                        dolorem laudantium officiis blanditiis alias nesciunt tenetur aspernatur?
-                                    </p>
-                                    <div class="project__description--links">
-                                        <a href="https://github.com/tahseenio" target="_blank"
-                                            class="project__description--link">
-                                            <i class="fab fa-github"></i>
-                                        </a>
-                                        <a href="https://github.com/tahseenio" target="_blank"
-                                            class="project__description--link">
-                                            <i class="fas fa-link"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="project" data-aos="fade-up" data-os-duration="3000">
-                            <div class="project__wrapper">
-                                <img src="./assets/blinker mockup.png" class="project__img" alt="">
-                                <div class="project__wrapper--bg"></div>
-                                <div class="project__description">
-                                    <h3 class="project__description--title">
-                                        Treact Website Replicate
-                                    </h3>
-                                    <h4 class="project__description--sub-title">
-                                        Html, CSS, Javascript
+                                        HTML, CSS, Javascript & React
                                     </h4>
                                     <p class="project__description--para">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ratione nisi
@@ -258,7 +286,7 @@
                     <div class="footer__anchor click">
                         <figure>
                             <a href="#">
-                                <img class="footer__logo--img" src="./assets/logo_inverted.svg" alt="">
+                                <img id="footer__logo" class="footer__logo--img" src="./assets/logo.svg" alt="">
                             </a>
                         </figure>
                         <span class="footer__logo--popper">
@@ -270,26 +298,26 @@
                         <a href="https://github.com/tahseenio" target="_blank" class="
                         footer__social--link
                         link__hover-effect
-                        link__hover-effect--white
+                        link__hover-effect--black
                     ">Github</a>
                         <a href="https://www.linkedin.com/in/tahseen1/" target="_blank" class="
                     footer__social--link
                     link__hover-effect
-                    link__hover-effect--white
+                    link__hover-effect--black
                     ">LinkedIn</a>
                     <a href="./assets/Resume.pdf" target="_blank" class="
                     footer__social--link
                     link__hover-effect
-                    link__hover-effect--white
+                    link__hover-effect--black
                     ">Resume</a>
                         <a href="#" onclick="toggleModal()" class="
                     footer__social--link
                     link__hover-effect
-                    link__hover-effect--white
+                    link__hover-effect--black
                     ">Contact</a>
                         
                     </div>
-                    <div class="footer__copyright">Copyright &copy; 2022 Tahseen Islam</div>
+                    <div class="footer__copyright">Copyright &copy; <span id="year"></span> Tahseen Islam</div>
                 </div>
             </div>
         </footer>

@@ -9,6 +9,7 @@ function randomIntFromInterval(min, max) {
   }
   
 randNumber = randomIntFromInterval(300, 3500)
+// randNumber = randomIntFromInterval(0, 0)
 
 function initLoader() {
         document.body.classList.add("stop-scrolling");
@@ -42,6 +43,7 @@ function toggleContrast() {
 function enableDarkTheme() {
     document.body.classList += " dark-theme"
     document.getElementById("personal-logo").src = "./assets/logo_inverted.svg";
+    document.getElementById("footer__logo").src = "./assets/logo_inverted.svg";
     localStorage.setItem('darkMode', "Dark");
     particlesJS.load('particles-js', 'particles-dark.json')
 }
@@ -49,6 +51,7 @@ function enableDarkTheme() {
 function disableDarkTheme() {
     document.body.classList.remove("dark-theme")
     document.getElementById("personal-logo").src = "./assets/logo.svg";
+    document.getElementById("footer__logo").src = "./assets/logo.svg";
     localStorage.setItem('darkMode', "Light")
     particlesJS.load('particles-js', 'particles-light.json')
 }
@@ -85,4 +88,12 @@ function toggleModal() {
     isModalOpen = true;     
     document.body.classList += " modal--open"
 }
+
+
+// dynamic year
+const date = new Date
+const year = date.getFullYear()
+
+const yearInput = document.getElementById("year")
+yearInput.innerHTML = year
 
