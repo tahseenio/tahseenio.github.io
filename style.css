@@ -586,6 +586,7 @@ TECH STACK
     padding-top: 48px;
     padding-bottom: 32px;
     border-radius: 20px;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
 }
 
 .language {
