@@ -585,6 +585,8 @@ TECH STACK
     background-color:rgb(255, 255, 255);
     padding-top: 48px;
     padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-radius: 20px;
     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
 }
@@ -594,13 +596,13 @@ TECH STACK
     display: flex;
     justify-content: center;
     position: relative;
-    padding-bottom: 24px;
     margin-bottom: 32px;
+    padding: 0px 16px 24px 16px;
   }
 
-  .language:nth-child(4),
-  .language:nth-child(5),
-  .language:nth-child(6) {
+  .language:nth-child(7),
+  .language:nth-child(8),
+  .language:nth-child(9) {
     margin-bottom: 0px;
   }
   
@@ -637,6 +639,10 @@ TECH STACK
     font-size: 20px;
     opacity: 0;
     font-weight: 500;
+  }
+
+  .language--react-native {
+    font-size: 18px;
   }
   
   .language:hover .language__name {
@@ -856,8 +862,8 @@ footer {
         width: 100% ;
     }
 
-    .language:nth-child(4),
-    .language:nth-child(5) {
+    .language:nth-child(7),
+    .language:nth-child(8){
       margin-bottom: 32px;
     }
 
