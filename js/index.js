@@ -1,4 +1,4 @@
-let randNumber;
+let randNumber = 0;
 let isModalOpen = false;
 let contrastToggle;
 history.scrollRestoration = 'manual';
@@ -6,21 +6,21 @@ history.scrollRestoration = 'manual';
 // Fake load time for loader function
 function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
-  }
-  
-randNumber = randomIntFromInterval(300, 3500)
+}
+
+randNumber = randomIntFromInterval(300, 2000)
 // randNumber = randomIntFromInterval(0, 0)
 
 function initLoader() {
-        document.body.classList.add("stop-scrolling");
+    document.body.classList.add("stop-scrolling");
     setTimeout(() => {
         document.body.classList.remove("stop-scrolling");
         document.getElementById("loader--wrapper").style.display = "none";
     }, randNumber);
- }
+}
 
 // Dark mode toggle with localstorage implementation
-if (localStorage.getItem('darkMode')===null) {
+if (localStorage.getItem('darkMode') === null) {
     localStorage.setItem('darkMode', "Dark")
 }
 
@@ -68,16 +68,16 @@ function contact(event) {
             'template_3upc3jw',
             event.target,
             'user_YUqGOfbhTjX61mJSdOviw'
-    ).then(() => {
-        loading.classList.remove('modal__overlay--visible')
-        success.classList += " modal__overlay--visible"
-        console.log('this worked')
-    }).catch(() => {
-        loading.classList.remove('modal__overlay--visible')
-        alert (
-            "The email service is temporarily unavailable. Please contact me directly on tahseenislam@outlook.com.au"
-        )
-    })
+        ).then(() => {
+            loading.classList.remove('modal__overlay--visible')
+            success.classList += " modal__overlay--visible"
+            console.log('this worked')
+        }).catch(() => {
+            loading.classList.remove('modal__overlay--visible')
+            alert(
+                "The email service is temporarily unavailable. Please contact me directly on tahseenislam@outlook.com.au"
+            )
+        })
 }
 
 function toggleModal() {
@@ -85,7 +85,7 @@ function toggleModal() {
         isModalOpen = false;
         return document.body.classList.remove("modal--open")
     }
-    isModalOpen = true;     
+    isModalOpen = true;
     document.body.classList += " modal--open"
 }
 
