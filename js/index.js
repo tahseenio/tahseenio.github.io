@@ -34,7 +34,7 @@ function CheckStatus() {
         contrastToggle = true;
     }
     else {
-        document.body.classList -= " dark-theme"
+        document.body.classList.toggle("dark-theme")
         contrastToggle = false;
         particlesJS.load('particles-js', 'particles-light.json')
     }
@@ -46,7 +46,7 @@ function toggleContrast() {
 }
 
 function enableDarkTheme() {
-    document.body.classList += " dark-theme"
+    document.body.classList += (" dark-theme")
     document.getElementById("personal-logo").src = "./assets/logo_inverted.svg";
     document.getElementById("footer__logo").src = "./assets/logo_inverted.svg";
     localStorage.setItem('darkMode', "Dark");
@@ -54,7 +54,7 @@ function enableDarkTheme() {
 }
 
 function disableDarkTheme() {
-    document.body.classList.remove("dark-theme")
+    document.body.classList.toggle("dark-theme")
     document.getElementById("personal-logo").src = "./assets/logo.svg";
     document.getElementById("footer__logo").src = "./assets/logo.svg";
     localStorage.setItem('darkMode', "Light")
