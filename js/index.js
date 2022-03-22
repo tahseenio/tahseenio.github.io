@@ -34,9 +34,8 @@ function CheckStatus() {
         contrastToggle = true;
     }
     else {
-        document.body.classList.toggle("dark-theme")
         contrastToggle = false;
-        particlesJS.load('particles-js', 'particles-light.json')
+        disableDarkTheme();
     }
 }
 
