@@ -3,21 +3,25 @@ let isModalOpen = false;
 let contrastToggle;
 history.scrollRestoration = 'manual';
 
-// Fake load time for loader function
-function randomIntFromInterval(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-randNumber = randomIntFromInterval(300, 2000)
-// randNumber = randomIntFromInterval(0, 0)
-
 function initLoader() {
     document.body.classList.add("stop-scrolling");
     setTimeout(() => {
         document.body.classList.remove("stop-scrolling");
         document.getElementById("loader--wrapper").style.display = "none";
-    }, randNumber);
+    }, 2000);
+    sessionStorage.setItem('firstLoad', "Loaded")
 }
+
+
+// First webpage load loading state
+if (sessionStorage.getItem('firstLoad') === null) {
+    initLoader()
+}
+else {
+    document.body.classList.remove("stop-scrolling");
+    document.getElementById("loader--wrapper").style.display = "none";
+}
+
 
 // Dark mode toggle with localstorage implementation
 if (localStorage.getItem('darkMode') === null) {
