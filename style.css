@@ -594,9 +594,9 @@ TECH STACK
   padding: 0px 16px 24px 16px;
 }
 
-.language:nth-child(7),
-.language:nth-child(8),
-.language:nth-child(9) {
+.language:nth-child(10),
+.language:nth-child(11),
+.language:nth-child(12) {
   margin-bottom: 0px;
 }
 
@@ -658,6 +658,17 @@ TECH STACK
 }
 .text-color--ts {
   color: rgb(45, 121, 199);
+}
+
+.text-color--jest {
+  color: #99424f;
+}
+.text-color--cypress {
+  color: #5c5c5e;
+}
+
+.text-color--sass {
+  color: #f06493;
 }
 
 /* 
@@ -856,8 +867,8 @@ footer {
     width: 100%;
   }
 
-  .language:nth-child(7),
-  .language:nth-child(8) {
+  .language:nth-child(10),
+  .language:nth-child(11) {
     margin-bottom: 32px;
   }
 
