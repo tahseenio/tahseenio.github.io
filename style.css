@@ -486,6 +486,11 @@ Modal
   line-height: 1.75;
 }
 
+.input--message {
+  min-height: 200px;
+  resize: none;
+}
+
 .form__item {
   margin-bottom: 20px;
 }
@@ -496,7 +501,6 @@ Modal
   color: white;
   font-weight: 700;
   width: 100%;
-  max-width: 240px;
   padding: 12px 24px;
   font-size: 20px;
   transition: all 300ms ease;
