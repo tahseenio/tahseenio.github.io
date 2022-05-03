@@ -366,16 +366,19 @@ nav {
 .social__link {
   background-color: #33b9de;
   color: white;
-  padding: 6px;
-  width: 32px;
+  padding: 12px;
   height: 32px;
   font-size: 14px;
   margin-right: 12px;
-  border-radius: 50%;
+  border-radius: 20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.social__header {
+  margin-right: 8px;
 }
 
 .mail__btn {
